@@ -1,11 +1,11 @@
 import groovy.json.JsonOutput
 def call() {
-	def var-00 = "000"
-	def var-01 = "111"
-	def var-02 = "222"
-	def var-03 = "333"
-	def var-04 = "444"
-	def var-05 = "555"
+	def var00 = "000"
+	def var01 = "111"
+	def var02 = "222"
+	def var03 = "333"
+	def var04 = "444"
+	def var05 = "555"
 	pipeline {
 		agent {
 			label 'linux'
@@ -24,21 +24,21 @@ def call() {
 		stage ("Preparations"){
 			steps {
 				script {
-					if (${env.var-00}="000")
-					   preparations000.groovy()
-					else if(${env.var-01}="111")
-					   preparations001.groovy
-					else if(${env.var-02}="222")
-					   preparations002.groovy
+					if (${env.var00}="000")
+					   preparations000()
+					else if(${env.var01}="111")
+					   preparations001()
+					else if(${env.var02}="222")
+					   preparations002()
 					else
-					   preparations004.groovy
+					   preparations004()
 				}
 			}
 		}
 		stage ("Create ECR REPO if not exist"){
 			steps {
 				script {
-                    create_ecr_repo.groovy()
+                    create_ecr_repo()
 				}
 			}
 		}

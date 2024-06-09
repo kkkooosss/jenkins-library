@@ -1,4 +1,4 @@
 def call(String name, String dayOfWeek) {
   sh "echo this is Preporation stage."
-  sh "the Environment value is: ${env.var-00}"
+  sh "the Environment value is: ${env.var00}"
 }
