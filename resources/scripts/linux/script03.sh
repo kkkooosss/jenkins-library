@@ -1,2 +1,2 @@
 #!/bin/bash
-echo Hello $1. Today is $2.
+echo RUN SRIPT 03
