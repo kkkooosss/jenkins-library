@@ -1,4 +1,5 @@
-def call(String name, String dayOfWeek) {
-  sh "echo this is Preporation stage 001."
-  sh "the Environment value is: ${env.var01}"
+def call() {
+  sh "echo this is Preporation stage."
+  loadLinuxScript(name: 'script02.sh')
+  sh "./script02.sh"
 }
