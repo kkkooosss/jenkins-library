@@ -1,4 +1,4 @@
-def call() {
+def call(String var_00, String var_01, String var_02) {
   sh """
     echo this is Create ECR REpo stage.
     echo ${var_00}
