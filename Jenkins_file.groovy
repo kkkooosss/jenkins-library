@@ -9,26 +9,18 @@ pipeline {
     }
     environment {
         var_00 = "${params.VAR_00 ?: '000'}"
-        var_01 = ""
-        var_02 = ""
-        var_03 = ""
     }
     stages {
         stage("Preparations") {
             steps {
                 script {
                     preparations000()
-                    // Explicitly set the environment variables
-                    env.var_01 = "${env.var_01}"
-                    env.var_02 = "${env.var_02}"
-                    env.var_03 = "${env.var_03}"
-                    sh """
-                        echo this is Preparation stage.
-                        echo var_00: ${env.var_00}
-                        echo var_01: ${env.var_01}
-                        echo var_02: ${env.var_02}
-                        echo var_03: ${env.var_03}
-                    """
+                    // Explicitly print the variables to ensure they are set
+                    echo "Preparation completed."
+                    echo "var_00: ${env.var_00}"
+                    echo "var_01: ${env.var_01}"
+                    echo "var_02: ${env.var_02}"
+                    echo "var_03: ${env.var_03}"
                 }
             }
         }
