@@ -1,2 +1,2 @@
 #!/bin/bash
-echo SRIPT 1
+echo RUN SRIPT 01
