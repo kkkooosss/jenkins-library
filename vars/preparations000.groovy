@@ -14,4 +14,6 @@ def call() {
     } else {
         error "Invalid value for var_00: ${env.var_00}"
     }
+    // Return the environment variables to ensure they are updated in the calling context
+    return [var_01: env.var_01, var_02: env.var_02, var_03: env.var_03]
 }
