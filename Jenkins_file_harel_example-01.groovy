@@ -11,7 +11,7 @@ def call() {
 	    environment {
         var_01 = "${params.VAR_01 ?: '0'}"
         var_02 = "${params.VAR_02 ?: '0'}"
-		var_03 = "${params.VAR_02 ?: '0'}"
+        var_03 = "${params.VAR_02 ?: '0'}"
     }
 	stages {
 		stage ("Preparations"){
