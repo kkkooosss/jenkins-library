@@ -13,7 +13,7 @@ def call() {
 		stage ("Preparations"){
 			steps {
 				script {
-                    preparations000()
+                    preparations000.groovy()
 			}
 		}
 		stage ("Create ECR REPO if not exist"){
