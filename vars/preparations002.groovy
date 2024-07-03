@@ -1,9 +1,11 @@
-def call(String name, String dayOfWeek) {
-  sh "echo this is Preporation stage 2222."
-  sh "export var_00=12222"
-  sh "export var_01=22222"
-  sh "export var_02=32222"
-  sh "echo ${var_00}"
-  sh "echo ${var_01}"
-  sh "echo ${var_02}"
+def call() {
+    sh """
+        echo this is Preparation stage 000.
+        export var_00=12222
+        export var_01=22222
+        export var_02=32222
+        echo \${var_00}
+        echo \${var_01}
+        echo \${var_02}
+    """
 }
