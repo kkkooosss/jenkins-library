@@ -1,5 +1,5 @@
 def call() {
-      if (${env.var_00}="000")
+      if (${env.var_00}=="000")
         sh """
             echo this is Preparation stage 000.
             export var_01=10000
@@ -9,7 +9,7 @@ def call() {
             echo \${var_01}
             echo \${var_02}
         """      
-      else if(${env.var_00}="111")
+      else if(${env.var_00}=="111")
         sh """
             echo this is Preparation stage 111.
             export var_01=11111
@@ -19,7 +19,7 @@ def call() {
             echo \${var_01}
             echo \${var_02}
         """   
-      else if(${env.var_00}="222")
+      else if(${env.var_00}=="222")
         sh """
             echo this is Preparation stage 222.
             export var_01=12222
