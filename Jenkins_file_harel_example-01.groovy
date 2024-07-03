@@ -1,6 +1,5 @@
 import groovy.json.JsonOutput
 def call() {
-	def var_00 = "0"
 	def var_01 = "0"
 	def var_02 = "0"
 	def var_03 = "0"
@@ -9,6 +8,11 @@ def call() {
 			label 'linux'
 		}
 	}
+	    environment {
+        var_01 = "${params.VAR_01 ?: '0'}"
+        var_02 = "${params.VAR_02 ?: '0'}"
+		var_03 = "${params.VAR_02 ?: '0'}"
+    }
 	stages {
 		stage ("Preparations"){
 			steps {
